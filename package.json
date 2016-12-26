@@ -30,5 +30,9 @@
   "bugs": {
     "url": "https://github.com/epoberezkin/ajv-async/issues"
   },
-  "homepage": "https://github.com/epoberezkin/ajv-async#readme"
+  "homepage": "https://github.com/epoberezkin/ajv-async#readme",
+  "devDependencies": {
+    "nodent": "^3.0.7",
+    "regenerator": "^0.9.5"
+  }
 }
