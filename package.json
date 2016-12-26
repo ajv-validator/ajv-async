@@ -1,0 +1,34 @@
+{
+  "name": "ajv-async",
+  "version": "0.0.1",
+  "description": "Managing and detecting async validation mode in Ajv - JSON-Schema validator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/epoberezkin/ajv-async.git"
+  },
+  "keywords": [
+    "JSON",
+    "schema",
+    "validator",
+    "validation",
+    "jsonschema",
+    "json-schema",
+    "json-schema-validator",
+    "json-schema-validation",
+    "async",
+    "generators",
+    "co",
+    "nodent",
+    "regenerator"
+  ],
+  "author": "Evgeny Poberezkin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/epoberezkin/ajv-async/issues"
+  },
+  "homepage": "https://github.com/epoberezkin/ajv-async#readme"
+}
