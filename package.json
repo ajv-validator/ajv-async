@@ -38,5 +38,8 @@
   "devDependencies": {
     "nodent": "^3.0.7",
     "regenerator": "^0.9.5"
+  },
+  "peerDependencies": {
+    "ajv": "^5.0.0"
   }
 }
