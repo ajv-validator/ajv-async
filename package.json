@@ -1,6 +1,6 @@
 {
   "name": "ajv-async",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Configure async validation mode in Ajv - JSON-Schema validator",
   "main": "index.js",
   "scripts": {
