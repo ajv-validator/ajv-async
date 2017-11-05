@@ -35,11 +35,10 @@
     "url": "https://github.com/epoberezkin/ajv-async/issues"
   },
   "homepage": "https://github.com/epoberezkin/ajv-async#readme",
-  "devDependencies": {
-    "nodent": "^3.0.7",
-    "regenerator": "^0.9.5"
-  },
   "peerDependencies": {
-    "ajv": "^5.0.0"
+    "ajv": "^6.0.0-beta.0"
+  },
+  "dependencies": {
+    "nodent": "^3.1.3"
   }
 }
