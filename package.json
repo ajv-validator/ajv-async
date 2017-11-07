@@ -4,6 +4,8 @@
   "description": "Configure async validation mode in Ajv - JSON-Schema validator",
   "main": "index.js",
   "scripts": {
+    "bundle": "rm -rf dist && ./scripts/bundle",
+    "prepublish": "npm run bundle",
     "test-spec": "mocha spec/*.spec.js -R spec",
     "test-cov": "nyc npm run test-spec",
     "test": "npm run test-cov"
@@ -44,9 +46,11 @@
     "nodent": "^3.1.3"
   },
   "devDependencies": {
+    "browserify": "^14.5.0",
     "mocha": "^4.0.1",
     "nyc": "^11.3.0",
-    "pre-commit": "^1.2.2"
+    "pre-commit": "^1.2.2",
+    "uglify-js": "^3.1.8"
   },
   "nyc": {
     "exclude": [
