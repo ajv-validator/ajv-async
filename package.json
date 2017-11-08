@@ -52,6 +52,10 @@
     "pre-commit": "^1.2.2",
     "uglify-js": "^3.1.8"
   },
+  "files": [
+    "index.js",
+    "dist/"
+  ],
   "nyc": {
     "exclude": [
       "**/spec/**",
