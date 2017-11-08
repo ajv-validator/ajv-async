@@ -10,7 +10,8 @@ description=$(./scripts/info description)
 mkdir -p dist
 
 browserify -r "./$main:$name" \
-           -o "dist/$name.bundle.js"
+           -o "dist/$name.bundle.js" \
+           -s ajvAsync
 
 uglifyjs "dist/$name.bundle.js" -o "dist/$name.min.js" \
          -c -m --source-map \
