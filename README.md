@@ -1,7 +1,8 @@
 # ajv-async
 Configure async validation mode in [Ajv](https://github.com/epoberezkin/ajv) - JSON-Schema validator
 
-[![npm version](https://badge.fury.io/js/ajv-async.svg)](https://www.npmjs.com/package/ajv-async)
+[![Build Status](https://travis-ci.org/epoberezkin/ajv-async.svg?branch=master)](https://travis-ci.org/epoberezkin/ajv-async)
+[![npm](https://img.shields.io/npm/v/ajv-async.svg)](https://www.npmjs.com/package/ajv-async)
 [![Gitter](https://img.shields.io/gitter/room/ajv-validator/ajv.svg)](https://gitter.im/ajv-validator/ajv)
 
 ## Install
