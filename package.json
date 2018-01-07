@@ -40,7 +40,7 @@
   },
   "homepage": "https://github.com/epoberezkin/ajv-async#readme",
   "peerDependencies": {
-    "ajv": "^6.0.0-beta.0"
+    "ajv": ">= 6.0.0-beta.0"
   },
   "dependencies": {
     "nodent": "^3.1.3"
