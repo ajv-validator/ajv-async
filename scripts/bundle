@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+
+set -e
+
+name=$(./scripts/info name)
+main=$(./scripts/info main)
+version=$(./scripts/info version)
+description=$(./scripts/info description)
+
+mkdir -p dist
+
+browserify -r "./$main:$name" \
+           -o "dist/$name.bundle.js" \
+           -s ajvAsync
+
+uglifyjs "dist/$name.bundle.js" -o "dist/$name.min.js" \
+         -c -m --source-map \
+         -b "beautify=false, preamble='/* $name $version: $description */'"

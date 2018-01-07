@@ -1,10 +1,14 @@
 {
   "name": "ajv-async",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Configure async validation mode in Ajv - JSON-Schema validator",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "bundle": "rm -rf dist && ./scripts/bundle",
+    "prepublish": "npm run bundle",
+    "test-spec": "mocha spec/*.spec.js -R spec",
+    "test-cov": "nyc npm run test-spec",
+    "test": "npm run test-cov"
   },
   "repository": {
     "type": "git",
@@ -35,11 +39,32 @@
     "url": "https://github.com/epoberezkin/ajv-async/issues"
   },
   "homepage": "https://github.com/epoberezkin/ajv-async#readme",
-  "devDependencies": {
-    "nodent": "^3.0.7",
-    "regenerator": "^0.9.5"
-  },
   "peerDependencies": {
-    "ajv": "^5.0.0"
+    "ajv": "^6.0.0"
+  },
+  "dependencies": {
+    "nodent": "^3.1.3"
+  },
+  "devDependencies": {
+    "ajv": "^6.0.0",
+    "browserify": "^14.5.0",
+    "mocha": "^4.0.1",
+    "nyc": "^11.3.0",
+    "pre-commit": "^1.2.2",
+    "uglify-js": "^3.1.8"
+  },
+  "files": [
+    "index.js",
+    "dist/"
+  ],
+  "nyc": {
+    "exclude": [
+      "**/spec/**",
+      "node_modules"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ]
   }
 }
