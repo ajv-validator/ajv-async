@@ -14,7 +14,7 @@ npm install ajv-async
 
 ## Usage
 
-The code below configures async mode in Ajv instance to use the best async mode (async functions or generators) available in the current environment with/without transpilation. If transpilation is required, you should install [nodent](https://github.com/MatAtBread/nodent) or [regenerator](https://github.com/facebook/regenerator), ajv-async doesn't install them.
+The code below configures async mode in Ajv instance to transpile async functions using [nodent](https://github.com/MatAtBread/nodent), if required.
 
 ```javascript
 var Ajv = require('ajv');
@@ -23,18 +23,12 @@ var setupAsync = require('ajv-async');
 var ajv = setupAsync(new Ajv);
 ```
 
-`async` and/or `transpile` options can be passed to Ajv to enable a specific async/transpilation mode. See [Ajv docs](https://github.com/epoberezkin/ajv#asynchronous-validation) for more information.
+A boolean `transpile` option can be passed to Ajv instance to enforce (or to prohibit) transpilation. See [Ajv docs](https://github.com/epoberezkin/ajv#asynchronous-validation) for more information.
 
 
 ## Using in browser
 
-At the moment Ajv already includes nodent and regenerators bundles. You still need to use this package, unless you manually set `async` option and explicitely pass `processCode` option. `transpile` option support requires using this package.
-
-If you build this package with your code with Webpack, it will log warnings because this package uses optional dependencies. To suppress these warnings use [IgnorePlugin](https://webpack.github.io/docs/list-of-plugins.html#ignoreplugin):
-
-```javascript
-new IgnorePlugin(/regenerator|nodent/, /ajv-async/)
-```
+ajv-async bundle in npm package already includes nodent. If you bundle your code with browserify or webpack, when you `require('ajv-async')` nodent will be included as well.
 
 
 ## License
