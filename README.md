@@ -1,4 +1,11 @@
 # ajv-async
+
+## DEPRECATED / ARCHIVED
+
+Ajv compiles asynchronous schemas to async functions that are supported in most JavaScript environments.
+
+If you need to support other environments, you can compile schemas to [standalone validation code](https://github.com/ajv-validator/ajv/blob/master/docs/standalone.md) - it is not fully implemented/supported - and use any transpiler you prefer, there is no need to use this package.
+
 Configure async validation mode in [Ajv](https://github.com/epoberezkin/ajv) - JSON-Schema validator
 
 [![Build Status](https://travis-ci.org/epoberezkin/ajv-async.svg?branch=master)](https://travis-ci.org/epoberezkin/ajv-async)
